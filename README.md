@@ -70,7 +70,7 @@ review-intelligence-engine/
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone <your-github-repo-url>
+git clone https://github.com/InfantShervin/review-intelligence-engine.git
 cd review-intelligence-engine
 ```
 
