@@ -1,12 +1,14 @@
 from scrapers.g2 import G2Scraper
 from scrapers.capterra import CapterraScraper
+from scrapers.trustradius import TrustRadiusScraper
 
 
 class ScraperManager:
 
     SOURCES = {
         "g2": G2Scraper(),
-        "capterra": CapterraScraper()
+        "capterra": CapterraScraper(),
+        "trustradius": TrustRadiusScraper()
     }
 
     def run(self, company, source, start_date, end_date):
