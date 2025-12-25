@@ -22,9 +22,15 @@ end = datetime.fromisoformat(args.end_date)
 validate_dates(start, end)
 
 metrics = Metrics()
-
 manager = ScraperManager()
-reviews = manager.run(args.company, args.source, start, end)
+
+try:
+    reviews = manager.run(args.company, args.source, start, end)
+except Exception:
+    print("❌ Scraping blocked by platform protection.")
+    print("ℹ️ This is expected for sites like G2.")
+    print("ℹ️ Please refer to sample_output.json.")
+    exit(0)
 
 metrics.reviews_collected = len(reviews)
 

@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from scrapers.base import BaseScraper
 from utils.http import fetch
+from scrapers.selenium_fallback import fetch_with_selenium
 from utils.dates import parse_date
 from models.review import Review
 
@@ -15,8 +16,14 @@ class G2Scraper(BaseScraper):
 
         while True:
             url = f"https://www.g2.com/products/{product_id}/reviews?page={page}"
+
             html = fetch(url)
-            soup = BeautifulSoup(html, "html.parser")
+
+            # 🔴 If requests is blocked → Selenium fallback
+            if html is None:
+                soup = fetch_with_selenium(url)
+            else:
+                soup = BeautifulSoup(html, "html.parser")
 
             blocks = soup.select("div.paper") or soup.find_all("article")
             if not blocks:
