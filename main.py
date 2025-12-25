@@ -10,7 +10,7 @@ setup_logger()
 
 parser = argparse.ArgumentParser(description="Review Intelligence Engine")
 parser.add_argument("--company", required=True)
-parser.add_argument("--source", required=True, choices=["g2", "capterra", "trustradius"])
+parser.add_argument("--source", required=True, choices=["g2", "capterra", "trustradius","hackernews"])
 parser.add_argument("--start_date", required=True)
 parser.add_argument("--end_date", required=True)
 parser.add_argument("--output", default="output/reviews.json")
