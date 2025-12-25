@@ -1,0 +1,152 @@
+[
+  {
+    "source": "hackernews",
+    "company": "figma",
+    "title": null,
+    "review": "That\u2019s very interesting! Have they documented the reasoning for that approach? I would have expected iframes to be both simpler and faster sandboxing mechanism especially in compute bound cases. Maybe the communication overhead is too high in their workload?<p>EDIT: found this from your other comment: <a href=\"https:&#x2F;&#x2F;www.figma.com&#x2F;blog&#x2F;an-update-on-plugin-security&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.figma.com&#x2F;blog&#x2F;an-update-on-plugin-security&#x2F;</a> they do not address any alternatives considered.",
+    "date": "2025-12-24 06:20:15",
+    "rating": null,
+    "reviewer": "MobiusHorizons",
+    "url": null
+  },
+  {
+    "source": "hackernews",
+    "company": "figma",
+    "title": null,
+    "review": "Any similar AI based services&#x2F;agents that can take images&#x2F;creative assets (eg Figma, Sketch, Adobe PS, etc files) and create production-ready emails and landing pages in HTML?",
+    "date": "2025-12-24 04:29:12",
+    "rating": null,
+    "reviewer": "chevman",
+    "url": null
+  },
+  {
+    "source": "hackernews",
+    "company": "figma",
+    "title": null,
+    "review": "As I noted in another comment Figma has used QuickJS to run JS inside Wasm ever since a security vulnerability was discovered in their previous implementation.<p>In a browser environment it&#x27;s much easier to sandbox Wasm successfully than to sandbox JS.",
+    "date": "2025-12-24 02:52:25",
+    "rating": null,
+    "reviewer": "kettlecorn",
+    "url": null
+  },
+  {
+    "source": "hackernews",
+    "company": "figma",
+    "title": null,
+    "review": "Sandboxing.<p>Figma for example used QuickJS, the prior version of the library this post is about, to sandbox user authored Javascript plugins: <a href=\"https:&#x2F;&#x2F;www.figma.com&#x2F;blog&#x2F;an-update-on-plugin-security&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.figma.com&#x2F;blog&#x2F;an-update-on-plugin-security&#x2F;</a><p>It&#x27;s pretty handy for things like untrusted user authored JS scripts that run on a user&#x27;s client.",
+    "date": "2025-12-24 02:43:25",
+    "rating": null,
+    "reviewer": "kettlecorn",
+    "url": null
+  },
+  {
+    "source": "hackernews",
+    "company": "figma",
+    "title": null,
+    "review": "ImageByQwen.com \u2013 Fast AI text-to-photo using Qwen \nIt utilizes the Qwen-Image-Layered model (latest open-source release by the Alibaba Qwen team in December 2025) to intelligently decompose any single image (JPG&#x2F;PNG&#x2F;WebP) into 3-8 transparent RGBA layers, each with a perfect alpha channel, soft edges, and correct occlusion order. Key highlights: Automatic semantic segmentation: Intelligently identifies foreground, background, objects, text, shadows, etc., automatically filling in occluded areas without manual cutout.<p>Controllable decomposition: Specifies the number of layers (3&#x2F;4&#x2F;5&#x2F;8), supporting recursive subdivision (unlimited levels).<p>Editing freedom: After importing into Photoshop&#x2F;Figma&#x2F;After Effects, objects can be independently moved, scaled, recolored, and deleted, maintaining pixel consistency.<p>Professional-grade output: Transparent PNGs, perfectly preserving soft edges such as hair, glass, and smoke.<p>API-friendly: No cold start, batch processing, suitable for e-commerce, design, VFX, animation, and other scenarios.<p>Real-world example: Upload product photos \u2192 Break them down into 4 layers: product, background, text, and lighting \u2192 Easily change the background or color in seconds.",
+    "date": "2025-12-23 17:57:06",
+    "rating": null,
+    "reviewer": "mariolattik",
+    "url": null
+  },
+  {
+    "source": "hackernews",
+    "company": "figma",
+    "title": null,
+    "review": "I don&#x27;t think so. I&#x27;ve seen multiple posts from Figma and Codex talking about the best way of working with both tools.",
+    "date": "2025-12-21 20:06:24",
+    "rating": null,
+    "reviewer": "GenerWork",
+    "url": null
+  },
+  {
+    "source": "hackernews",
+    "company": "figma",
+    "title": null,
+    "review": "&gt;Isn\u2019t frontend more complex? If my task starts with a Figma UI design, how well does a code agent do at generating working code that looks right, and iterate on it (presuming some browser MCP)? Some automated tests seem enough for an genetic loop on backend.<p>Haven&#x27;t tried a Figma design, but i built an internal tool entirely via instructions to agent. The kind of work I could easily quote 3 weeks previously.",
+    "date": "2025-12-20 18:41:32",
+    "rating": null,
+    "reviewer": "murukesh_s",
+    "url": null
+  },
+  {
+    "source": "hackernews",
+    "company": "figma",
+    "title": null,
+    "review": "Isn\u2019t frontend more complex? If my task starts with a Figma UI design, how well does a code agent do at generating working code that looks right, and iterate on it (presuming some browser MCP)? Some automated tests seem enough for an genetic loop on backend.",
+    "date": "2025-12-20 18:31:36",
+    "rating": null,
+    "reviewer": "etse",
+    "url": null
+  },
+  {
+    "source": "hackernews",
+    "company": "figma",
+    "title": null,
+    "review": "If one axis is fixed, and it is in the case of grid lanes (it&#x27;s not a fully pannable infinite canvas like Figma after all), you just keep reading the content that&#x27;s on the current screen, then you scroll. I really don&#x27;t see how it&#x27;s any different to, for example as I mentioned previously, a long newspaper with many pages; each &quot;page&quot; is one &quot;screen&quot; worth, analogously. It&#x27;s like infinite scroll, either vertically or horizontally, where instead of just one item in the list, you have a few. And if we&#x27;re being really pedantic, Figma users do perfectly fine keeping the context of the content in their minds even in an infinitely pannable canvas. And also, generally newspaper readers do not do what you say, scanning column by column, they instead glance their eyes over all of the headlines then pick which one looks good then they read the article attached to that, it is a free form process.<p>So again, I will contend that this is not a problem for the average reader. I really cannot see where the difficulty you seem to say lies.",
+    "date": "2025-12-20 08:47:09",
+    "rating": null,
+    "reviewer": "satvikpendem",
+    "url": null
+  },
+  {
+    "source": "hackernews",
+    "company": "figma",
+    "title": null,
+    "review": "&gt; That doesn&#x27;t change the fact that HN is a dirt simple message board anybody could build.<p>What is this an objection to? If you follow this thread upwards, where was it suggested that we should be talking about things so complex that nobody, or only very few, could build? The whole pitch of htmx is that it is proposed for building things that anybody could build. The article in the title assumes that the target audience isn&#x27;t building Google Docs, Figma, video editors, or CAD tools.",
+    "date": "2025-12-19 23:31:28",
+    "rating": null,
+    "reviewer": "azangru",
+    "url": null
+  },
+  {
+    "source": "hackernews",
+    "company": "figma",
+    "title": null,
+    "review": "Qwen-Image-Layered is a diffusion model that, unlike most SOTA-ish models out there (e.g. Flux, Krea 1, ChatGPT, Qwen-Image) it&#x27;s (1) open-weight (unlike ChatGPT Image or Nano Banana) and Apache 2.0; and has 2 distinct inference-time features: (i) it&#x27;s able to understand the alpha channel of images (RGBA, as opposed to RGB only) which makes it able to generate transparency-aware bitmaps; and (ii), it&#x27;s able to understand layers [1]\u2014this is how most creative professionals work in software like Photoshop or Figma, where you overlay elements into a single file, such as a foreground and a background.<p>This is the first model by a main AI research lab (the people behind Qwen Image, which is basically the SOTA open image diffusion model) with those capabilities afaik.<p>The difference in timing for this submission (16 hours ago) is because that&#x27;s when the research&#x2F;academic paper got released\u2014as opposed to the inference code and model weights, which just got released 5 hours ago.<p>---<p>Technically there&#x27;s another difference, but this mostly matters for people who are interested in AI research or AI training. From their abstract: \u201c[we introduce] a Multi-stage Training strategy to adapt a pretrained image generation model into a multilayer image decomposer.\u201d which seems to imply that you can adapt a current (but different) image model to understand layers as well, as well as a pipeline to obtain the data from Photoshop .PSD files.",
+    "date": "2025-12-19 20:19:24",
+    "rating": null,
+    "reviewer": "dvrp",
+    "url": null
+  },
+  {
+    "source": "hackernews",
+    "company": "figma",
+    "title": null,
+    "review": "i didnt realize you can pass it a figma MCP link. is this an undocumented feature ?",
+    "date": "2025-12-18 22:49:21",
+    "rating": null,
+    "reviewer": "misiti3780",
+    "url": null
+  },
+  {
+    "source": "hackernews",
+    "company": "figma",
+    "title": null,
+    "review": "GPT 5.2 has gotten a lot better at building UI elements when given a Figma MCP server link. I used to use Claude for building brand new UI elements based on the Figma link, but 5.2 caught up to a point where I&#x27;m probably going to cancel Claude.",
+    "date": "2025-12-18 18:32:32",
+    "rating": null,
+    "reviewer": "GenerWork",
+    "url": null
+  },
+  {
+    "source": "hackernews",
+    "company": "figma",
+    "title": null,
+    "review": "All of those, for many or most users, would be best used as tool calls to ChatGPT. That takes care of all the hold those companies have over users, which they use to extract money. As for stealing the useful parts:<p>- Adobe Photoshop, Canva, Figma, Replit, Lovable - are all kinds of Computer Aided creation tools, and once converted into tool calls, can be gradually reproduced and replaced feature by feature.<p>- The rest, they&#x27;re just fancy (and user disempowering) wrappers around proprietary databases and&#x2F;or API calls to humans. Those cannot be trivially reproduced, because <i>code is neither their secret sauce, nor their source of value</i>. But they can still be pressured into becoming tool calls along with competition, and subsequently commoditized.",
+    "date": "2025-12-18 11:42:01",
+    "rating": null,
+    "reviewer": "TeMPOraL",
+    "url": null
+  },
+  {
+    "source": "hackernews",
+    "company": "figma",
+    "title": null,
+    "review": "Explain how they will &quot;steal&quot; these apps? (currently available):<p>Adobe Photoshop\nAllTrails\nBooking.com\nExpedia\nInstacart\nOpenTable\nSpotify\nTripadvisor\nAirtable\nApple Music\nCanva\nFigma\nLovable\nReplit\nTarget\nZillow",
+    "date": "2025-12-18 11:04:13",
+    "rating": null,
+    "reviewer": "FergusArgyll",
+    "url": null
+  }
+]
