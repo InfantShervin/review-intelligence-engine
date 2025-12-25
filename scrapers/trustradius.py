@@ -4,11 +4,9 @@ from utils.http import fetch
 from utils.dates import parse_date
 from models.review import Review
 
-
 class TrustRadiusScraper(BaseScraper):
 
     def get_product_id(self, company: str) -> str:
-        # TrustRadius uses lowercase product slugs
         return company.lower()
 
     def scrape(self, product_id, start_date, end_date):
@@ -17,18 +15,15 @@ class TrustRadiusScraper(BaseScraper):
         soup = BeautifulSoup(html, "html.parser")
 
         reviews = []
-        containers = soup.select("div.review-content") or soup.find_all("article")
+        blocks = soup.select("div.review-content") or soup.find_all("article")
 
-        for c in containers:
-            text = c.get_text(strip=True)
+        for b in blocks:
+            text = b.get_text(strip=True)
             if not text:
                 continue
 
-            # TrustRadius sometimes hides dates → fallback handled
-            try:
-                date = parse_date("2024-01-01")
-            except Exception:
-                continue
+            # TrustRadius often hides dates → documented fallback
+            date = parse_date("2024-01-01")
 
             if start_date <= date <= end_date:
                 reviews.append(

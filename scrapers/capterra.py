@@ -4,7 +4,6 @@ from utils.http import fetch
 from utils.dates import parse_date
 from models.review import Review
 
-
 class CapterraScraper(BaseScraper):
 
     def get_product_id(self, company: str) -> str:
@@ -16,13 +15,13 @@ class CapterraScraper(BaseScraper):
         soup = BeautifulSoup(html, "html.parser")
 
         reviews = []
-        containers = soup.select("div.review")
+        blocks = soup.select("div.review") or soup.find_all("article")
 
-        for c in containers:
-            text_tag = c.find("p")
-            date_tag = c.find("time")
+        for b in blocks:
+            text = b.find("p")
+            date_tag = b.find("time")
 
-            if not text_tag or not date_tag:
+            if not text or not date_tag:
                 continue
 
             try:
@@ -36,7 +35,7 @@ class CapterraScraper(BaseScraper):
                         source="capterra",
                         company=product_id,
                         title=None,
-                        review=text_tag.get_text(strip=True),
+                        review=text.get_text(strip=True),
                         date=date,
                         rating=None,
                         reviewer=None,

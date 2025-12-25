@@ -4,7 +4,6 @@ from utils.http import fetch
 from utils.dates import parse_date
 from models.review import Review
 
-
 class G2Scraper(BaseScraper):
 
     def get_product_id(self, company: str) -> str:
@@ -19,15 +18,15 @@ class G2Scraper(BaseScraper):
             html = fetch(url)
             soup = BeautifulSoup(html, "html.parser")
 
-            containers = soup.select("div.paper")
-            if not containers:
+            blocks = soup.select("div.paper") or soup.find_all("article")
+            if not blocks:
                 break
 
-            for c in containers:
-                body_tag = c.select_one("[itemprop='reviewBody']") or c.find("p")
-                date_tag = c.find("time")
+            for b in blocks:
+                body = b.select_one("[itemprop='reviewBody']") or b.find("p")
+                date_tag = b.find("time")
 
-                if not body_tag or not date_tag:
+                if not body or not date_tag:
                     continue
 
                 try:
@@ -41,7 +40,7 @@ class G2Scraper(BaseScraper):
                             source="g2",
                             company=product_id,
                             title=None,
-                            review=body_tag.get_text(strip=True),
+                            review=body.get_text(strip=True),
                             date=date,
                             rating=None,
                             reviewer=None,

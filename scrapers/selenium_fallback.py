@@ -2,7 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 
-
 def fetch_with_selenium(url: str):
     options = Options()
     options.add_argument("--headless")

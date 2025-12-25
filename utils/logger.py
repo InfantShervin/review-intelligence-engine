@@ -1,10 +1,8 @@
 import logging
 import os
 
-
 def setup_logger():
     os.makedirs("logs", exist_ok=True)
-
     logging.basicConfig(
         filename="logs/scraper.log",
         level=logging.INFO,
