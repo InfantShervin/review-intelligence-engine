@@ -1,0 +1,22 @@
+[
+  {
+    "source": "g2",
+    "company": "notion",
+    "title": "Excellent collaboration tool",
+    "review": "Notion has significantly improved how our team documents and collaborates on projects.",
+    "date": "2024-03-15T00:00:00",
+    "rating": 5,
+    "reviewer": "Product Manager",
+    "url": "https://www.g2.com/products/notion/reviews"
+  },
+  {
+    "source": "capterra",
+    "company": "notion",
+    "title": "Flexible and powerful",
+    "review": "The flexibility Notion offers is unmatched. It adapts well to different workflows.",
+    "date": "2024-02-20T00:00:00",
+    "rating": 4.5,
+    "reviewer": "Startup Founder",
+    "url": "https://www.capterra.com/p/notion/reviews/"
+  }
+]
